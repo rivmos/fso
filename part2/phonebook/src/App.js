@@ -52,7 +52,7 @@ const App = () => {
 
 
   const handleDelete = (id) => {
-    axios.delete(`http://localhost:3001/persons/${id}`)
+    axios.delete(`/api/persons/${id}`)
       .then(() => setPersons(persons.filter(person => person.id !== id)))
       .catch(err => {
         setError({message:err.message, color:'red'})
